@@ -10,6 +10,9 @@ import org.acme.entity.Greeting;
 import org.acme.service.GreetingService;
 import org.jboss.resteasy.reactive.RestQuery;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Path("/hello")
 public class GreetingResource {
 
@@ -34,4 +37,11 @@ public class GreetingResource {
         return service.greeting(name);
     }
 
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("/names")
+    public String names() {
+        List<Greeting> greetings = Greeting.listAll();
+        return greetings.stream().map(Greeting::getName).collect(Collectors.joining(", "));
+    }
 }
