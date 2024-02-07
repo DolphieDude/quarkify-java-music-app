@@ -43,4 +43,15 @@ class GreetingResourceTest {
                 .statusCode(200)
                 .body(is("Hello, t"));
     }
+
+    @Test
+    public void testNamesEndpoint() {
+        given()
+                .get("/hello?input=test");
+        given()
+                .when().get("/hello/names")
+                .then()
+                .statusCode(200)
+                .body(is("test"));
+    }
 }
