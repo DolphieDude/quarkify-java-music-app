@@ -25,4 +25,5 @@ public class GreetingResource {
     public String greeting(String name) {
         return service.greeting(name);
     }
+
 }
