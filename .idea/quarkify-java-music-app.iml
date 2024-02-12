@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="Hibernate" />
+        <datasource-mapping>
+          <factory-entry name="quarkify-java-music-app" value="89112b35-35df-4f00-9849-edf56fda17b1" />
+        </datasource-mapping>
+        <naming-strategy-map />
+      </configuration>
+    </facet>
+  </component>
   <component name="Quarkus Tools">
     <option name="hash" value="-287359904" />
     <option name="version" value="1" />
