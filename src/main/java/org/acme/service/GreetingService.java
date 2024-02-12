@@ -14,5 +14,4 @@ public class GreetingService {
 
         return "Hello, " + formattedName;
     }
-
 }

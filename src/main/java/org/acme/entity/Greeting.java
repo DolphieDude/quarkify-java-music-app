@@ -9,9 +9,7 @@ import jakarta.persistence.Id;
 @Entity
 public class Greeting extends PanacheEntityBase {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) public Long id;
 
     private String name;
 
